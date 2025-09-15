@@ -1,0 +1,12 @@
+.loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;   /* ocupa todo el ancho */
+    height: 100vh;  /* ocupa toda la altura */
+    background-color: #cdffff;
+
+    gap: 1rem; /* espacio entre texto y loader */
+}

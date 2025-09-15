@@ -1,0 +1,30 @@
+.App {
+  text-align: center;
+  font-family: sans-serif;
+  padding: 20px;
+  background-color: #cdffff;
+}
+
+.Header{
+  background-color: #aef3f3;
+  top:0;
+  left: 0;
+  width: 100%;
+  z-index: 100%;
+  padding: 10px;
+  border-radius: 5px;
+}
+.card {
+  background-color: #004789;
+  transition: transform 0.3s ease-in-out;
+
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+html{
+  scroll-behavior: smooth;
+  scrollbar-color:#006691 #aef3f3 ;
+}
