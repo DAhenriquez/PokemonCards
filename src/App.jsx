@@ -44,14 +44,17 @@ function App() {
 
   return (
     <div className="App">
-      <div className='Header'>
-      <Text size="xl" ta="center" fw="bold" c="#006691">
-        Galería de Cartas: "Base Set"
-      </Text>
-      <Text size="sm" ta="center" fw="bold" c="#006691">
-        Por: Diego A. Henríquez
-      </Text>
-
+      <div className='header-container'>
+        <img src="/pokeball.png" alt="Pokeball" className="pokeball-image" />
+        <div className='Header'>
+        <Text size="xl" ta="center" fw="bold" c="#006691">
+          Galería de Cartas: "Base Set"
+        </Text>
+        <Text size="sm" ta="center" fw="bold" c="#006691">
+          Por: Diego A. Henríquez
+        </Text>
+      </div>
+      
       </div>
       <Grid mt="md">
         {cards.map((card) => (
