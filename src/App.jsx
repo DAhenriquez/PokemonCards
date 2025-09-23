@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import TCGdex from '@tcgdex/sdk';
 import Loading from './components/Loading/loading';
-import { Text, Grid, Card, Image } from '@mantine/core';
+import { Text, Grid} from '@mantine/core';
+import CardComponent from './components/Card/card';
 
 const tcgdex = new TCGdex('en');
 
@@ -36,6 +37,7 @@ function App() {
     //Aquí invocamos la función externa
     fetchAllCards(setCards, setIsLoading);
   }, []); // Se ejecuta solo una vez
+  // dejamos el array vacío para que solo se ejecute una vez al montar el componente
 
   if (isLoading) {
     //retornamos el componente que creamos en caso de que se encuentre cargando
@@ -47,10 +49,10 @@ function App() {
       <div className='header-container'>
         <img src="/pokeball.png" alt="Pokeball" className="pokeball-image" />
         <div className='Header'>
-        <Text size="xl" ta="center" fw="bold" c="#006691">
+        <Text size="xl" ta="center" fw="bold" c="white">
           Galería de Cartas: "Base Set"
         </Text>
-        <Text size="sm" ta="center" fw="bold" c="#006691">
+        <Text size="sm" ta="center" fw="bold" c="white">
           Por: Diego A. Henríquez
         </Text>
       </div>
@@ -59,18 +61,7 @@ function App() {
       <Grid mt="md">
         {cards.map((card) => (
           <Grid.Col key={card.id} span={{ base: 12, sm: 6, md: 4, lg: 3 }}>
-            <Card shadow="sm" padding="md" radius="md" withBorder bg='#006691' className='card'>
-              <Card.Section>
-                <Image
-                  src={card.image + '/high.png'}
-                  alt={card.name}
-                  fit="contain"
-                />
-              </Card.Section>
-              <Text ta="center" mt="sm" fw={700} c='white'>
-                {card.name}
-              </Text>
-            </Card>
+            <CardComponent card={card} />
           </Grid.Col>
         ))}
       </Grid>
