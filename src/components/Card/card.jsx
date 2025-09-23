@@ -5,7 +5,7 @@ import './card.css';
 
 function CardComponent({ card }) {
   return (
-<Card shadow="sm" padding="md" radius="md" withBorder bg='#006691' className='card'>
+<Card shadow="sm" padding="md" radius="md" bg='#006691' className='card'>
     <Card.Section>
         <Image
             src={card.image + '/high.png'}
