@@ -8,7 +8,7 @@ function CardComponent({ card }) {
 <Card shadow="sm" padding="md" radius="md" bg='#006691' className='card'>
     <Card.Section>
         <Image
-            src={card.image + '/high.png'}
+            src={card.image + '/low.png'}
             alt={card.name}
             fit="contain"
        />
